@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acacac;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+  margin: 0;
+  font-family: sans-serif;
+  /* border: 10px solid black; */
+  border-radius: 20px;
+  overflow: hidden;
+}

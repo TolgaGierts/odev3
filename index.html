@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="body.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="aside.css" />
+  <link rel="stylesheet" href="card.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo"><a href="#"><i class="fa-2x fa fa-eye"></i></a></div>
+      <div class="nav-list">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-2x fa fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-2x fa fa-podcast"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-2x fa fa-calendar"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-2x fa fa-cog"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-2x fa fa-comments"></i></a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="sign-out">
+        <a href="#"><i class="fa-2x fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="topControls">
+        <div class="listingControls">
+          <a href="#"><i class="fa-x fa fa-list"></i></a>
+          <a href="#"><i class="fa-x fa fa-bars"></i></a>
+        </div>
+        <div class="customSelect">
+          <select name="days" id="days" class="daysControls">
+            <option value="15">Last 15 days</option>
+            <option value="30">Last 30 days</option>
+          </select>
+          <i class="fa fa-caret-down"></i>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <i class="fa fa-twitter"></i>
+          <span class="title">280k</span>
+          <span class="subtitle">Followers</span>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="card">
+          <i class="fa fa-instagram"></i>
+          <span class="title">280k</span>
+          <span class="subtitle">Followers</span>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="card">
+          <i class="fa fa-youtube"></i>
+          <span class="title">280k</span>
+          <span class="subtitle">Followers</span>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="card">
+          <i class="fa fa-facebook"></i>
+          <span class="title">280k</span>
+          <span class="subtitle">Followers</span>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+      </div>
+
+      <div>
+        <canvas id="myChart" width="%100"></canvas>
+      </div>
+
+      <div class="key-metrics">
+
+        <ul>
+          <h2>Key Metrics</h2>
+          <li>
+            <div>Clicks</div>
+            <div>10k</div>
+          </li>
+          <li>
+            <div>Followers</div>
+            <div> 8k</div>
+          </li>
+          <li>
+            <div>Impressions</div>
+            <div>5500</div>
+          </li>
+          <li>
+            <div>Likes</div>
+            <div>680</div>
+          </li>
+
+        </ul>
+        <div class="cards">
+          <div class="card">
+            <h5>Engaged Users</h5>
+            <span class="title">280k</span>
+            <span class="subtitle">Followers</span>
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+          <div class="card">
+            <h5>Page Impressions</h5>
+            <span class="title">280k</span>
+            <span class="subtitle">Followers</span>
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+        </div>
+
+    </main>
+    <aside></aside>
+  </div>
+  <script>
+    var xValues = [" January", "February", "March", "April", "May", "June", "July", "August", "September"
+      , "October", "November", "December"]; var yValues = [[55, -15], -49, 44, 24, 15]; var
+        barColors = ["red", "green"];
+    new Chart("myChart", {
+      type: "bar", data: {
+        labels: xValues, datasets: [{
+          backgroundColor: barColors, data: yValues
+        }]
+      }, options: {
+        title: {
+          display: true,
+          text: "instagram subscribers"
+        }
+      }
+    }); </script>
+</body>
+
+</html>
